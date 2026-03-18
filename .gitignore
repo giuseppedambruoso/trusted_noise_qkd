@@ -1,27 +1,45 @@
-# --- Output e Dati Pesanti ---
-# Escludiamo la cartella dei risultati per evitare il crash del push
+# --- Tue Regole Specifiche (PER EVITARE CRASH) ---
 results/
+qkd_venv/
+merged_results.csv
+params.txt
 *.log
 *.out
 *.dat
-*.csv
 *.npy
 *.hdf5
 
-# --- File di Sistema e temporanei ---
-.DS_Store
-Thumbs.db
+# --- Python Standard ---
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# --- File di configurazione/ambiente ---
+# --- Ambienti Virtuali ---
 .env
-venv/
+.venv
 env/
-qkd_venv/
+venv/
 
-# --- Backup ed Editor ---
+# --- Editor e Sistema ---
+.DS_Store
 *.swp
-*~
 .vscode/
 .idea/
+.ipynb_checkpoints
