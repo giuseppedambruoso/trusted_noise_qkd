@@ -18,10 +18,10 @@ This project uses Poetry for dependency management. To set up the project locall
    ```bash
    poetry install
 3. (Optional) If you plan to contribute to the code, install the pre-commit hooks:
-
-Bash
-poetry run pre-commit install
-🚀 Usage
+   ```bash
+   poetry run pre-commit install
+   
+## 🚀 Usage
 The main entry point for the simulation is main.py. The script requires three positional arguments:
 
 N (integer): The finite-size parameter (or 1 if running asymptotic phase1).
@@ -34,9 +34,9 @@ Outputs are saved as CSV files automatically in the results/ directory.
 
 Running a Single Job locally
 To run a single simulation on your local machine, use Poetry to execute the script within the virtual environment:
+   ```bash
+   poetry run python main.py <N> <p> <alpha>
 
-Bash
-poetry run python main.py <N> <p> <alpha>
 Example:
 
 Bash
@@ -50,14 +50,14 @@ Ensure your parameters are listed in src/trusted_noise_qkd/config/params.txt. Th
 2. Setup directories:
 HTCondor requires the log directories to exist before submission. Create them if they don't:
 
-Bash
+```Bash
 mkdir -p logs results
 3. Check cluster paths:
 ⚠️ Important: Open wrapper.sh and ensure the path to the virtual environment matches your cluster's specific setup. Currently, it points to a specific Lustre filesystem path (/lustrehome/giosca/SCALAG/trusted_noise2/qkd_venv/bin/activate). Update this to your local Poetry environment or cluster environment if needed.
 
 4. Make the wrapper executable:
 
-Bash
+```Bash
 chmod +x wrapper.sh
 5. Submit the jobs:
 
