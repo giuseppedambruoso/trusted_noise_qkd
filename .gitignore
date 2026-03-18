@@ -1,0 +1,27 @@
+# --- Output e Dati Pesanti ---
+# Escludiamo la cartella dei risultati per evitare il crash del push
+results/
+*.log
+*.out
+*.dat
+*.csv
+*.npy
+*.hdf5
+
+# --- File di Sistema e temporanei ---
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+
+# --- File di configurazione/ambiente ---
+.env
+venv/
+env/
+qkd_venv/
+
+# --- Backup ed Editor ---
+*.swp
+*~
+.vscode/
+.idea/

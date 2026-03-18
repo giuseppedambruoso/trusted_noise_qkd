@@ -1,0 +1,23 @@
+# job_submission.sub
+
+executable = wrapper.sh
+arguments  = $(N) $(p) $(alpha)
+
+# Send standard output and error to the logs folder
+output     = logs/out_$(N)_$(p)_$(alpha).txt
+error      = logs/err_$(N)_$(p)_$(alpha).txt
+log        = logs/condor.log
+
+# Transfer the necessary scripts and the virtual environment folder
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_input_files = config.py, main.py
+transfer_output_files = results
+
+# Resource requests
+request_cpus   = 1
+request_memory = 2GB
+request_disk   = 1GB
+
+# Queue jobs
+queue N,p,alpha from params.txt
