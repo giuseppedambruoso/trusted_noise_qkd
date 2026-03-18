@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "trusted-noise-qkd"
+version = "0.1.0"
+description = "A Python-based simulation framework for analyzing Quantum Key Distribution (QKD) protocols involving trusted noise."
+authors = ["Giuseppe D'Ambruoso, Gabriele Staffieri, Giovanni Scala, Cosmo Lupo"]
+license = "MIT License"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+numpy = "^2.4.3"
+matplotlib = "^3.10.8"
+scipy = "^1.17.1"
+pandas = "^3.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
