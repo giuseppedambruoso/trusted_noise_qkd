@@ -8,10 +8,10 @@ output     = logs/out_$(N)_$(p)_$(alpha).txt
 error      = logs/err_$(N)_$(p)_$(alpha).txt
 log        = logs/condor.log
 
-# Transfer the necessary scripts and the virtual environment folder
+# Transfer the necessary scripts and project configuration
 should_transfer_files = YES
 when_to_transfer_output = ON_EXIT
-transfer_input_files = config.py, main.py
+transfer_input_files = src/, pyproject.toml, poetry.lock
 transfer_output_files = results
 
 # Resource requests
@@ -20,4 +20,4 @@ request_memory = 2GB
 request_disk   = 1GB
 
 # Queue jobs
-queue N,p,alpha from params.txt
+queue N,p,alpha from src/trusted_noise_qkd/config/params.txt
